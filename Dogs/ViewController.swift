@@ -15,7 +15,9 @@ class ViewController: UIViewController, UICollectionViewDataSource  {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        NetworkManager.getFlickrAPI { (json) in
+            print("here")
+        }
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -27,7 +29,7 @@ class ViewController: UIViewController, UICollectionViewDataSource  {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: DogCell = collectionView.dequeueReusableCell(withReuseIdentifier: "dogCellId", for: indexPath) as! DogCell;
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "dogCellId", for: indexPath) as! DogCell;
         
         cell.imageView.image = UIImage(named: "chowchow");
         cell.dogLabel.text = "Chow Chow"
