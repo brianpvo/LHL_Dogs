@@ -9,15 +9,18 @@
 import UIKit
 
 class DogModel: NSObject {
+    let farmId: Int
+    let serverId: Int
+    let id: Int
+    let secret: String
+    let url: String
     
-    struct Dog {
-//        let title: String
-//        let url: URL
-        
-        init(dictionary: NSDictionary) {
-            //
-            print(dictionary)
-        }
+    init(dictionary: NSDictionary) {
+        farmId = dictionary["farm"] as! Int
+        serverId = dictionary["server"] as! Int
+        id = dictionary["id"] as! Int
+        secret = dictionary["secret"] as! String
+        url = "https://farm\(farmId).staticflickr.com/\(serverId)/\(id)_\(secret).jpg"
     }
-
+    
 }

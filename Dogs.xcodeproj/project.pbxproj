@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A101279209667F700FEAF35 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A101278209667F700FEAF35 /* DataManager.swift */; };
 		7A8C9CBB209640600029FCA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8C9CBA209640600029FCA0 /* AppDelegate.swift */; };
 		7A8C9CBD209640600029FCA0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8C9CBC209640600029FCA0 /* ViewController.swift */; };
 		7A8C9CC0209640600029FCA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A8C9CBE209640600029FCA0 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A101278209667F700FEAF35 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		7A8C9CB7209640600029FCA0 /* Dogs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dogs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A8C9CBA209640600029FCA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A8C9CBC209640600029FCA0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				7A8C9CDA209643150029FCA0 /* DogCell.swift */,
 				7A8C9CDC209652E90029FCA0 /* DogModel.swift */,
 				7A8C9CDE209654200029FCA0 /* NetworkManager.swift */,
+				7A101278209667F700FEAF35 /* DataManager.swift */,
 				7A8C9CBE209640600029FCA0 /* Main.storyboard */,
 				7A8C9CC1209640620029FCA0 /* Assets.xcassets */,
 				7A8C9CC3209640620029FCA0 /* LaunchScreen.storyboard */,
@@ -207,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A8C9CDD209652E90029FCA0 /* DogModel.swift in Sources */,
+				7A101279209667F700FEAF35 /* DataManager.swift in Sources */,
 				7A8C9CBD209640600029FCA0 /* ViewController.swift in Sources */,
 				7A8C9CDF209654200029FCA0 /* NetworkManager.swift in Sources */,
 				7A8C9CBB209640600029FCA0 /* AppDelegate.swift in Sources */,
