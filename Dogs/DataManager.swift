@@ -18,8 +18,10 @@ final class DataManager: NSObject {
         
         NetworkManager.getFlickrAPI { (array) in
             self.dogArray = array!
+            OperationQueue.main.addOperation {
+                completion()
+            }
         }
-        completion()
     }
 
 }

@@ -18,6 +18,7 @@ class ViewController: UIViewController, UICollectionViewDataSource  {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         dataManager.getDogs {
+            //self.collectionView.reloadSections(IndexSet(integer: 0))
             self.collectionView.reloadData()
         }
     }
@@ -28,15 +29,15 @@ class ViewController: UIViewController, UICollectionViewDataSource  {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         print(dataManager.dogArray.count)
-        return 1//dataManager.dogArray.count
+        return dataManager.dogArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "dogCellId", for: indexPath) as! DogCell;
         
-        cell.imageView.image = UIImage(named: "chowchow");
-        cell.dogLabel.text = "Chow Chow"
-        //cell.displayContent(image: dataManager.dogArray[indexPath.row].image, title: "test")
+//        cell.imageView.image = dataManager.dogArray[indexPath.row].image
+//        cell.dogLabel.text = dataManager.dogArray[indexPath.row].title
+        cell.displayContent(image: dataManager.dogArray[indexPath.row].image, title: dataManager.dogArray[indexPath.row].title)
         
         return cell;
     }
