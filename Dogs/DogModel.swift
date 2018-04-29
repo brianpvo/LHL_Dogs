@@ -19,7 +19,6 @@ class DogModel {
     let title: String
     
     init(dictionary: NSDictionary) {
-        //print(dictionary)
         farmId = dictionary["farm"] as! Int
         serverId = (dictionary["server"] as? String)!
         id = (dictionary["id"] as? String)!
