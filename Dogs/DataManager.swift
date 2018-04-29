@@ -16,9 +16,9 @@ final class DataManager: NSObject {
     
     func getDogs(completion: @escaping () -> Void) {
         
-        NetworkManager.getFlickrAPI { (json) in
-            <#code#>
-        }
+//        NetworkManager.getFlickrAPI { (json) in
+//            <#code#>
+//        }
     }
 
 }

@@ -15,8 +15,8 @@ class ViewController: UIViewController, UICollectionViewDataSource  {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        NetworkManager.getFlickrAPI { (json) in
-            print("here")
+        NetworkManager.getFlickrAPI { (array) in
+            //print(array as! [DogModel])
         }
     }
     

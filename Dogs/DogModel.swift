@@ -8,19 +8,20 @@
 
 import UIKit
 
-class DogModel: NSObject {
+class DogModel {
     let farmId: Int
-    let serverId: Int
-    let id: Int
+    let serverId: String
+    let id: String
     let secret: String
     let url: String
     
     init(dictionary: NSDictionary) {
         farmId = dictionary["farm"] as! Int
-        serverId = dictionary["server"] as! Int
-        id = dictionary["id"] as! Int
+        serverId = (dictionary["server"] as? String)!
+        id = (dictionary["id"] as? String)!
         secret = dictionary["secret"] as! String
         url = "https://farm\(farmId).staticflickr.com/\(serverId)/\(id)_\(secret).jpg"
+        print(url)
     }
     
 }
