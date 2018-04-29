@@ -12,11 +12,13 @@ class ViewController: UIViewController, UICollectionViewDataSource  {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    let dataManager = DataManager.sharedInstance
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        NetworkManager.getFlickrAPI { (array) in
-            //print(array as! [DogModel])
+        dataManager.getDogs {
+            self.collectionView.reloadData()
         }
     }
     
@@ -25,7 +27,8 @@ class ViewController: UIViewController, UICollectionViewDataSource  {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        print(dataManager.dogArray.count)
+        return 1//dataManager.dogArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -33,6 +36,7 @@ class ViewController: UIViewController, UICollectionViewDataSource  {
         
         cell.imageView.image = UIImage(named: "chowchow");
         cell.dogLabel.text = "Chow Chow"
+        //cell.displayContent(image: dataManager.dogArray[indexPath.row].image, title: "test")
         
         return cell;
     }
